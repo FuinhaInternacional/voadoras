@@ -1,6 +1,18 @@
 __author__ = 'fuinha'
 
 
+def tabuleiro ( tela, html):
+    tabul = html.DIV()
+    tela <= tabul
+
+
+def embaralha(tela , html):
+    pass
+
+
+def voardoras(tela , html):
+    pass
+
 
 
 def main(html, doc):
