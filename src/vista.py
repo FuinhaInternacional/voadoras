@@ -12,6 +12,7 @@ def embaralha(tela , html):
 
 def voardoras(tela , html):
     pass
+    pass
 
 
 
