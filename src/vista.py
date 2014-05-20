@@ -22,3 +22,7 @@ def main(html, doc):
     #html = gui.html
     splash = html.DIV("VOADORAS")
     tela <= splash
+    tabuleiro(tela, html)
+    embaralha(tela, html)
+    voa(tela, html)
+
