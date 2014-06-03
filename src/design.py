@@ -3,17 +3,14 @@ FACE = 'http://thumbs.dreamstime.com/z/joker-playing-card-19231679.jpg'
 CH = CV = 50
 
 
-class Carta:
-    def __init__(self, html, xy, deque):
-        x, y = self.pos = xy
-        self.deque = deque
-        ct = self.e_carta = html.IMG(src=FACE, width=CH, heigth=CV)
-        ct.style.position = "absolute"
-        ct.style.left, ct.style.top = xy
-        x = x / 5
-        ct.style.transition = "left 2s linear %fs, top 2s linear %fs" % (x, x)
-        deque <= ct
-        ct.onclick = self.voa
+class Celula:
+    def __init__(self, html, xy, grade):
+        self.ecelula=html.DIV("-")
+        self.ecelula.style.backgroundColor="black"
+        self.ecelula.style.width="9%"
+        self.ecelula.style.margin="9%"
+        self.ecelula.style.float="left"
+        grade.egrade<=self.ecelula
 
     def voa(self, evento):
         self.deque.voa()
@@ -26,10 +23,13 @@ class Carta:
         ct.style.left, ct.style.top = xy
 
 
-class Deque:
+class Grade:
     def __init__(self, html, tela):
         self.tela = tela
-        self.deque = [Carta(html, (x*4, 10), self) for x in range(10)]
+        self.egrade= html.DIV()
+        tela<=self.egrade
+        self.grade = [Celula(html, (x*4, 10), self) for x in range(81)]
+
 
     def voa(self):
         [carta.voar((100, 100)) for carta in self.deque]
@@ -54,9 +54,10 @@ def voa(tela, html):
 def main(html, doc):
     tela = doc["main"]
     #html = gui.html
-    splash = html.DIV("DELICIA CARA")
+    splash = html.DIV(" ")
     tela <= splash
+    tela.style.backgroundColor="black"
     #tabuleiro(tela, html)
     #embaralha(tela, html)
     #voa(tela, html)
-    deque = Deque(html, tela)
+    grade=Grade(html, tela)
